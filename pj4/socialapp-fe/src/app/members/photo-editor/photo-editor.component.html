@@ -1,0 +1,110 @@
+<div class="row">
+    @for (item of member().photos; track item.id) {
+    <div class="col-4">
+        <div class="img-wrapper">
+            <img [src]="item.url" [alt]="item.url" class="img-thumbnail">
+        </div>
+
+        <div class="text-center">
+            <button
+                [disabled]="item.isMain"
+                (click)="setMainPhoto(item)"
+                [ngClass]="item.isMain ? 'btn btn-sm btn-success active' : 'btn btn-sm btn-success'">
+                <i class="bi bi-person-circle me-1"></i>
+                {{ item.isMain ? 'Current Avatar' : 'Set Avatar' }}
+            </button>
+            <button 
+                [disabled]="item.isMain" 
+                (click)="deletePhoto(item)" 
+                class="btn btn-sm btn-danger">
+                <i class="bi bi-trash"></i>
+            </button>
+        </div>
+    </div>
+    }
+</div>
+
+<!-- Upload Section -->
+<div class="upload-container">
+    <!-- Single File Upload -->
+    <div class="upload-row">
+        <div class="upload-input-group">
+            <i class="bi bi-file-earmark-image"></i>
+            <input class="form-control" 
+                   ng2FileSelect 
+                   [uploader]="uploader" 
+                   type="file" 
+                   id="singleFile"
+                   placeholder="Choose a single photo">
+            <label for="singleFile">Single Photo</label>
+        </div>
+    </div>
+
+    <!-- Multiple Files Upload -->
+    <div class="upload-row">
+        <div class="upload-input-group">
+            <i class="bi bi-images"></i>
+            <input class="form-control" 
+                   type="file" 
+                   ng2FileSelect 
+                   [uploader]="uploader" 
+                   multiple 
+                   id="multipleFiles"
+                   placeholder="Choose multiple photos">
+            <label for="multipleFiles">Multiple Photos</label>
+        </div>
+    </div>
+
+    <!-- Drag & Drop Zone -->
+    <div class="upload-row">
+        <div class="drop-zone" 
+             ng2FileDrop 
+             [ngClass]="{'nv-file-over': hasBaseDropZoneOver}" 
+             (fileOver)="fileOverBase($event)"
+             [uploader]="uploader">
+            <i class="bi bi-cloud-upload"></i>
+            <span>Drag and drop photos here</span>
+        </div>
+    </div>
+
+    <!-- Upload Queue -->
+    @if (uploader?.queue?.length) {
+        <div class="queue-container">
+            <div class="queue-header">
+                <h3>Upload Queue ({{ uploader?.queue?.length }} files)</h3>
+                <div class="progress-wrapper">
+                    <div class="progress">
+                        <div class="progress-bar" 
+                             role="progressbar" 
+                             [style.width.%]="uploader?.progress">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="queue-actions">
+                <button type="button" 
+                        class="btn btn-upload"
+                        (click)="uploader?.uploadAll()"
+                        [disabled]="!uploader?.getNotUploadedItems()?.length">
+                    <i class="bi bi-cloud-upload"></i>
+                    Upload All
+                </button>
+                <button type="button" 
+                        class="btn btn-cancel"
+                        (click)="uploader?.cancelAll()"
+                        [disabled]="!uploader?.isUploading">
+                    <i class="bi bi-x-circle"></i>
+                    Cancel
+                </button>
+                <button type="button" 
+                        class="btn btn-clear"
+                        (click)="uploader?.clearQueue()"
+                        [disabled]="!uploader?.queue?.length">
+                    <i class="bi bi-trash"></i>
+                    Clear
+                </button>
+            </div>
+        </div>
+    }
+</div>

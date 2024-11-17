@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a5816be4-95d9-4ade-a334-7dd79abdd662" name="Changes" comment="add friends" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sportclubs04hehe&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sportclubs04hehe/api.git&quot;,
+    &quot;accountId&quot;: &quot;5ea673e7-0640-46bb-8a60-6de67464a72a&quot;
+  }
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2mSj1nwoE4Tcn23wbJ5PBA78BvU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.BackendApplication.executor": "Debug",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/FPT_APTECH/Project/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "spring.configuration.checksum": "b43fdd98b1fd705ae4c3a10cf25aad8a",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\FPT_APTECH\Project\backend\src\main\resources\static\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FPT_APTECH\Project\backend\src\main\resources\static\images\female" />
+      <recent name="D:\FPT_APTECH\Project\backend\src\main\resources\static\images" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="fpt.edu.vn.backend.repository" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="19" />
+      <module name="backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fpt.edu.vn.backend.BackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5816be4-95d9-4ade-a334-7dd79abdd662" name="Changes" comment="" />
+      <created>1727076660579</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727076660579</updated>
+      <workItem from="1727076662209" duration="3588000" />
+      <workItem from="1727080746206" duration="3355000" />
+      <workItem from="1727140653292" duration="17619000" />
+      <workItem from="1727226702428" duration="5320000" />
+      <workItem from="1727232297478" duration="16674000" />
+      <workItem from="1727312874317" duration="24355000" />
+      <workItem from="1727399075577" duration="14650000" />
+      <workItem from="1727526701339" duration="1749000" />
+      <workItem from="1727838738109" duration="8545000" />
+      <workItem from="1727919279918" duration="958000" />
+      <workItem from="1727926401110" duration="6973000" />
+      <workItem from="1728008355310" duration="2654000" />
+      <workItem from="1728042333900" duration="8145000" />
+      <workItem from="1728116284813" duration="4613000" />
+      <workItem from="1728204288039" duration="7422000" />
+      <workItem from="1728268253818" duration="171000" />
+      <workItem from="1728268436925" duration="22080000" />
+      <workItem from="1728358731711" duration="13201000" />
+      <workItem from="1728458744407" duration="14726000" />
+      <workItem from="1728539422703" duration="45902000" />
+      <workItem from="1728801348292" duration="1549000" />
+      <workItem from="1728802922470" duration="2935000" />
+      <workItem from="1728889103000" duration="5532000" />
+      <workItem from="1728959264893" duration="16378000" />
+      <workItem from="1729003017682" duration="5614000" />
+      <workItem from="1729138491394" duration="2575000" />
+      <workItem from="1729149792063" duration="37000" />
+      <workItem from="1729149847024" duration="144000" />
+      <workItem from="1729150029732" duration="4630000" />
+      <workItem from="1729178954371" duration="3279000" />
+      <workItem from="1729219093724" duration="6853000" />
+      <workItem from="1729301272124" duration="17486000" />
+      <workItem from="1729392282327" duration="16425000" />
+      <workItem from="1729478346423" duration="100000" />
+      <workItem from="1729568135361" duration="1483000" />
+      <workItem from="1729648291817" duration="3193000" />
+      <workItem from="1729652045090" duration="6665000" />
+      <workItem from="1729727964007" duration="14956000" />
+      <workItem from="1729837983241" duration="5850000" />
+      <workItem from="1730079967507" duration="20459000" />
+      <workItem from="1730109316746" duration="5275000" />
+      <workItem from="1730164674974" duration="3000" />
+      <workItem from="1730165931032" duration="18000" />
+      <workItem from="1730169898674" duration="24796000" />
+      <workItem from="1730250990587" duration="20895000" />
+      <workItem from="1730296443308" duration="12612000" />
+      <workItem from="1730372283812" duration="8006000" />
+      <workItem from="1730411671018" duration="11522000" />
+      <workItem from="1730447107942" duration="6045000" />
+      <workItem from="1730455962456" duration="1329000" />
+      <workItem from="1730458239731" duration="44515000" />
+      <workItem from="1730701176778" duration="10578000" />
+      <workItem from="1730722683303" duration="2138000" />
+      <workItem from="1730728568381" duration="17537000" />
+      <workItem from="1730854657896" duration="20669000" />
+      <workItem from="1730903193182" duration="5767000" />
+      <workItem from="1730942722534" duration="12628000" />
+      <workItem from="1731001997013" duration="1163000" />
+      <workItem from="1731115730851" duration="104000" />
+      <workItem from="1731115869635" duration="5876000" />
+      <workItem from="1731212835767" duration="3000" />
+      <workItem from="1731215376614" duration="6191000" />
+      <workItem from="1731223447141" duration="6618000" />
+      <workItem from="1731231236109" duration="24001000" />
+      <workItem from="1731332496655" duration="28440000" />
+      <workItem from="1731416643982" duration="3391000" />
+      <workItem from="1731456671602" duration="2112000" />
+      <workItem from="1731461724430" duration="1948000" />
+      <workItem from="1731464705537" duration="8865000" />
+      <workItem from="1731485827995" duration="6709000" />
+      <workItem from="1731494266364" duration="4670000" />
+      <workItem from="1731611543079" duration="43000" />
+      <workItem from="1731612407377" duration="97000" />
+      <workItem from="1731612531808" duration="4809000" />
+    </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <option name="closed" value="true" />
+      <created>1727334740598</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727334740598</updated>
+    </task>
+    <task id="LOCAL-00002" summary="delete photo">
+      <option name="closed" value="true" />
+      <created>1727336899911</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727336899911</updated>
+    </task>
+    <task id="LOCAL-00003" summary="lấy ảnh người dùng vào token">
+      <option name="closed" value="true" />
+      <created>1727419031230</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727419031230</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Show list users and details user">
+      <option name="closed" value="true" />
+      <created>1728463153744</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728463153744</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update user">
+      <option name="closed" value="true" />
+      <created>1728477334693</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728477334693</updated>
+    </task>
+    <task id="LOCAL-00006" summary="set main photo">
+      <option name="closed" value="true" />
+      <created>1728483721476</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728483721476</updated>
+    </task>
+    <task id="LOCAL-00007" summary="send request follow">
+      <option name="closed" value="true" />
+      <created>1729410379324</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729410379324</updated>
+    </task>
+    <task id="LOCAL-00008" summary="send request follow">
+      <option name="closed" value="true" />
+      <created>1729410943791</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1729410943791</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add friends">
+      <option name="closed" value="true" />
+      <created>1730426906219</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730426906219</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit" />
+    <MESSAGE value="delete photo" />
+    <MESSAGE value="lấy ảnh người dùng vào token" />
+    <MESSAGE value="Show list users and details user" />
+    <MESSAGE value="update user" />
+    <MESSAGE value="set main photo" />
+    <MESSAGE value="send request follow" />
+    <MESSAGE value="add friends" />
+    <option name="LAST_COMMIT_MESSAGE" value="add friends" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fpt/edu/vn/backend/config/mapper/PhotoUrlConverter.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fpt/edu/vn/backend/config/mapper/DateOfBirthToAgeConverter.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fpt/edu/vn/backend/controller/ChatController.java</url>
+          <line>141</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.StackOverflowError" package="java.lang" />
+          <option name="timeStamp" value="6" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/fpt/edu/vn/backend/controller/FriendshipController.java</url>
+          <line>116</line>
+          <properties class="fpt.edu.vn.backend.controller.FriendshipController" method="deleteFriend">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/fpt/edu/vn/backend/service/impl/FriendshipService.java</url>
+          <line>175</line>
+          <properties class="fpt.edu.vn.backend.service.impl.FriendshipService" method="deleteFriend">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

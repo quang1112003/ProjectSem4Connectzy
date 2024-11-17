@@ -1,0 +1,25 @@
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .form-label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .is-invalid {
+    border-color: #dc3545;
+  }
+  
+  .text-danger {
+    font-size: 0.875rem;
+  }
+  

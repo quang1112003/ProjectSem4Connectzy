@@ -1,0 +1,480 @@
+@import '../login/login.component.scss';
+
+/* Override host styles for register page */
+:host {
+    min-height: 100vh;
+    height: auto; /* Allow content to expand */
+    padding: 20px;
+    display: flex;
+    align-items: flex-start; /* Change from center to flex-start */
+}
+
+.modern-container {
+    width: 100%;
+    min-height: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Change from center to flex-start */
+}
+
+.login-box {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+/* Additional styles specific to register */
+.input-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+.gender-group {
+    margin-bottom: 20px;
+    background-color: #f1f3f5;
+    border-radius: 10px;
+    padding: 12px 16px;
+    
+    label {
+        color: var(--text-color);
+        font-size: 14px;
+        margin-right: 15px;
+        font-weight: 500;
+    }
+
+    .gender-options {
+        display: inline-flex;
+        gap: 20px;
+    }
+
+    .gender-option {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        padding: 8px 16px;
+        background: white;
+        border-radius: 8px;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #f8f9fa;
+        }
+
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+
+            &:checked + span {
+                color: #6c5ce7;
+                font-weight: 500;
+            }
+
+            &:checked ~ .gender-option {
+                border-color: #6c5ce7;
+                background-color: rgba(108, 92, 231, 0.1);
+            }
+        }
+
+        span {
+            color: var(--text-color);
+            font-size: 14px;
+            padding-left: 24px;
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 16px;
+                height: 16px;
+                border: 2px solid #ddd;
+                border-radius: 50%;
+                transition: all 0.3s ease;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 4px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 8px;
+                height: 8px;
+                background: #6c5ce7;
+                border-radius: 50%;
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+        }
+
+        input:checked + span {
+            &:before {
+                border-color: #6c5ce7;
+            }
+
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/* Adjust date input styling */
+input[type="date"].modern-input {
+    color: var(--text-color);
+    
+    &::-webkit-calendar-picker-indicator {
+        cursor: pointer;
+        filter: invert(0.5);
+    }
+}
+
+/* Override some login styles if needed */
+.signin-button {
+    margin-top: 24px;
+}
+
+.brand-tagline {
+    margin-bottom: 24px;
+}
+
+/* Add responsive styles */
+@media (max-width: 480px) {
+    :host {
+        padding: 0;
+    }
+
+    .modern-container {
+        padding: 0;
+    }
+
+    .login-box {
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+/* Add styles for larger screens */
+@media (min-height: 800px) {
+    :host {
+        align-items: center;
+    }
+
+    .modern-container {
+        align-items: center;
+    }
+}
+
+/* Modern date input styling */
+.modern-input[type="date"] {
+  position: relative;
+  
+  &::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+    
+    &:hover {
+      opacity: 1;
+      background-color: rgba(99, 102, 241, 0.1);
+    }
+  }
+
+  &::-webkit-datetime-edit {
+    color: #2c3e50;
+  }
+
+  &::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+
+  &::-webkit-datetime-edit-text {
+    padding: 0 4px;
+    color: #6c757d;
+  }
+
+  &::-webkit-datetime-edit-month-field,
+  &::-webkit-datetime-edit-day-field,
+  &::-webkit-datetime-edit-year-field {
+    padding: 0 4px;
+  }
+
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  &::-webkit-clear-button {
+    display: none;
+  }
+
+  // Styling for when no date is selected
+  &:not(:valid):before {
+    content: attr(placeholder);
+    color: #94a3b8;
+    position: absolute;
+    pointer-events: none;
+  }
+}
+
+// Firefox specific styles
+@-moz-document url-prefix() {
+  .modern-input[type="date"] {
+    position: relative;
+    
+    &::-moz-calendar-picker-indicator {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 8px;
+      background-color: transparent;
+      transition: all 0.3s ease;
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 1;
+        background-color: rgba(99, 102, 241, 0.1);
+      }
+    }
+  }
+}
+
+// Edge/IE specific styles
+@supports (-ms-ime-align: auto) {
+  .modern-input[type="date"] {
+    &::-ms-clear {
+      display: none;
+    }
+    
+    &::-ms-reveal {
+      display: none;
+    }
+  }
+}
+
+// Custom theme for bs-datepicker
+::ng-deep .theme-custom {
+  .bs-datepicker {
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 16px;
+    font-family: inherit;
+    width: 280px !important;
+    overflow: hidden;
+    
+    &-container {
+      padding: 0;
+    }
+    
+    &-head {
+      background-color: #6366f1;
+      padding: 12px;
+      
+      button {
+        color: white;
+        background: transparent;
+        border: none;
+        padding: 4px 8px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        font-size: 14px;
+        font-weight: 600;
+        
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
+    
+    &-body {
+      border: none;
+      padding: 12px;
+      
+      table {
+        th {
+          color: #6c757d;
+          font-size: 0.85rem;
+          font-weight: 600;
+          padding: 6px;
+        }
+        
+        td {
+          color: #2c3e50;
+          padding: 2px;
+          font-weight: 500;
+          
+          span {
+            border-radius: 8px;
+            display: inline-block;
+            padding: 4px;
+            width: 32px;
+            height: 32px;
+            line-height: 24px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            
+            &.selected {
+              background-color: #6366f1 !important;
+              color: white;
+              font-weight: 600;
+            }
+            
+            &:hover:not(.selected) {
+              background-color: rgba(99, 102, 241, 0.1);
+            }
+          }
+          
+          &.is-highlighted:not(.selected) span {
+            background-color: rgba(99, 102, 241, 0.05);
+          }
+          
+          &.disabled span {
+            color: #cbd5e1;
+            background: none !important;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+
+  .bs-datepicker-multiple {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}
+
+// Style for the date input with calendar icon
+.input-wrapper {
+  position: relative;
+
+  .modern-input[bsDatepicker] {
+    cursor: pointer;
+    padding-right: 40px;
+    
+    &::placeholder {
+      color: #94a3b8;
+    }
+    
+    &:focus {
+      border-color: #6366f1;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    }
+
+    // Hide calendar icon when input has error
+    &.input-error + .error-icon + .validation-error {
+      & ~ .calendar-icon {
+        display: none;
+      }
+    }
+  }
+
+  // Calendar icon as a separate element
+  .calendar-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    pointer-events: none;
+    font-size: 1.1rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover .calendar-icon {
+    opacity: 1;
+  }
+
+  .modern-input[bsDatepicker]:focus ~ .calendar-icon {
+    color: #6366f1;
+    opacity: 1;
+  }
+}
+
+// Year and month selection styles
+::ng-deep .theme-custom {
+  .bs-datepicker-head {
+    .current {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+  }
+
+  // Month and year selection buttons
+  .bs-datepicker-body {
+    table {
+      &.months, &.years {
+        td {
+          span {
+            font-weight: 500;
+            width: auto;
+            height: auto;
+            padding: 6px 12px;
+            
+            &.selected {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles for datepicker
+@media (max-width: 480px) {
+  ::ng-deep .theme-custom {
+    .bs-datepicker {
+      width: 260px !important;
+      margin: 0 auto;
+      
+      &-body {
+        padding: 8px;
+        
+        table {
+          td {
+            padding: 1px;
+            
+            span {
+              width: 28px;
+              height: 28px;
+              line-height: 20px;
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

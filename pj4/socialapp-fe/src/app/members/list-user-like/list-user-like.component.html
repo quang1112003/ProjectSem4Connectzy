@@ -1,0 +1,36 @@
+<div class="modal-header border-0">
+  <h4 class="modal-title">Users who liked this post</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="close()">
+    <i class="bi bi-x-lg"></i>
+  </button>
+</div>
+<div class="modal-body">
+  @if (users.length === 0) {
+    <div class="no-likes">
+      <i class="bi bi-heart"></i>
+      <p>No users liked this post yet.</p>
+    </div>
+  } @else {
+    <div class="users-list">
+      @for (user of users; track user.userEmail) {
+        <div class="user-item">
+          <div class="user-info">
+            <div class="avatar-wrapper">
+              <img [src]="user.photoUrl || './assets/avatar.png'" alt="user avatar" class="user-avatar">
+            </div>
+            <a class="username" (click)="navigateToUser(user.userEmail)">
+              {{ user.userKnowAs }}
+            </a>
+          </div>
+          <button class="view-profile-btn" (click)="navigateToUser(user.userEmail)">
+            <i class="bi bi-person"></i>
+            View Profile
+          </button>
+        </div>
+      }
+    </div>
+  }
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+</div>

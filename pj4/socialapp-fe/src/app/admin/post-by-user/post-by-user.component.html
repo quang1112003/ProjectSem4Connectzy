@@ -1,0 +1,67 @@
+<div class="posts-container" style="width: 50%; margin: 0 auto;">
+    @if (isLoading) {
+    <div class="loading-spinner">
+        <i class="bi bi-arrow-repeat spin"></i>
+        Loading posts...
+    </div>
+    }
+    @else {
+    @if(posts){
+    <p class="fs-3 text-center" style="color: blueviolet;">LIST POSTS OF {{member.knowAs | uppercase}}</p>
+    @for (item of posts; track item.id) {
+    <div class="post-card">
+        <!-- Post Header -->
+        <div class="post-header">
+            <div class="user-info">
+                <div class="profile-circle">
+                    <img [src]="member?.photoUrl || './assets/avatar.png'" alt="User Avatar" class="avatar">
+                </div>
+                <div class="user-details">
+                    <h5 class="username">{{ member?.knowAs }}</h5>
+                    <div class="post-metadata">
+                        <span class="post-time" *ngIf="item.updatedAt === null">
+                            <ng-container *ngIf="(item.createdAt | timeago) === '1 day ago'; else displayDate">
+                                {{ item.createdAt | date: 'short' }}
+                            </ng-container>
+                            <ng-template #displayDate>
+                                {{ item.createdAt | timeago }}
+                            </ng-template>
+                        </span>
+
+                        <span class="post-time" *ngIf="item.updatedAt !== null">
+                            Edit at {{ item.updatedAt | date: 'short' }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="btn btn-link dropdown-toggle" type="button" [id]="'dropdownMenu' + item.id"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" [attr.aria-labelledby]="'dropdownMenu' + item.id">
+                    <li>
+                        <a class="dropdown-item text-danger" (click)="deletePost(item.id)">
+                            <i class="bi bi-trash-fill me-2"></i> Delete
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>{{ item.content }}</p>
+        </div>
+        <gallery [id]="'gallery-' + item.id" [items]="imagesByPost.get(item.id) || []" thumbPosition="left"></gallery>
+    </div>
+    }
+    }@else {
+            <div class="no-posts">
+                <i class="bi bi-journal-x"></i>
+                No posts to display
+            </div>
+    }
+    }
+</div>

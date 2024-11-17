@@ -1,0 +1,72 @@
+<div class="modal-header">
+    <h5 class="modal-title">Create Post</h5>
+    <button type="button" class="btn-close" (click)="closeModal()">
+        <i class="bi bi-x-lg"></i>
+    </button>
+</div>
+
+<div class="modal-body">
+    <form [formGroup]="postForm" (ngSubmit)="submitPost()">
+        <div class="post-header">
+            <div class="user-info">
+                <img [src]="currentUser()?.photoUrl || './assets/avatar.png'" 
+                     class="avatar"
+                     [alt]="currentUser()?.knowAs">
+                <span class="username">{{ currentUser()?.knowAs | titlecase}}</span>
+            </div>
+            
+            <!-- Post Privacy Selector -->
+            <div class="privacy-selector">
+                <select class="form-select" (change)="onVisibilityChange($event)">
+                  <option id="visibilitySelect" *ngFor="let option of visibilityOptions" [value]="option">{{ option }}</option>
+                </select>
+            </div>
+        </div>
+
+        <textarea class="post-textarea"
+                  rows="3" 
+                  [placeholder]="getPlaceholder()"
+                  formControlName="content"
+                  style="background: white !important;;"
+                  autofocus>
+        </textarea>
+
+        <div class="upload-section">
+            <div class="file-input-wrapper">
+                <input type="file" 
+                       multiple 
+                       accept="image/*" 
+                       (change)="onFileSelected($event)"
+                       [attr.disabled]="selectedFiles.length >= 5 ? '' : null"
+                       class="file-input"
+                       #fileInput>
+                <button type="button" 
+                        class="upload-button" 
+                        (click)="fileInput.click()"
+                        [disabled]="selectedFiles.length >= 5">
+                    <i class="bi bi-image"></i>
+                    Add Photos ({{selectedFiles.length}}/5)
+                </button>
+            </div>
+
+            @if (selectedFiles.length > 0) {
+                <div class="selected-files">
+                    @for (file of selectedFiles; track file.file.name; let i = $index) {
+                        <div class="file-preview">
+                            <img [src]="file.preview" [alt]="file.file.name">
+                            <button type="button" class="remove-file" (click)="removeFile(i)">
+                                <i class="bi bi-x"></i>
+                            </button>
+                        </div>
+                    }
+                </div>
+            }
+
+            <button type="submit" 
+                    class="submit-button"
+                    [disabled]="postForm.invalid">
+                Post
+            </button>
+        </div>
+    </form>
+</div>

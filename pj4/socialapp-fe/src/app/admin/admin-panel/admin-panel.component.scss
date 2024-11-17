@@ -1,0 +1,44 @@
+/* Table Styles */
+.table {
+    th, td {
+      vertical-align: middle;
+      text-align: center;
+    }
+  
+    th {
+      background: linear-gradient(135deg, #2b5876, #4e4376);
+      color: #fff;
+      font-weight: bold;
+      position: sticky;
+      top: 0; /* Sticky header effect */
+    }
+  
+    td {
+      padding: 0.75rem;
+      transition: background-color 0.3s;
+    }
+  
+    tr:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+  
+  /* Badge Styles */
+  .badge {
+    padding: 0.5em 0.75em;
+    font-size: 0.85rem;
+    cursor: default;
+  }
+  
+  /* Pagination Styling */
+  .pagination {
+    li.page-item a, li.page-item span {
+      color: #007bff; /* Bootstrap primary color */
+    }
+  
+    li.page-item.active a, li.page-item.active span {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+  }
+  

@@ -1,0 +1,64 @@
+
+<div class="posts-container" style="width: 50%; margin: 0 auto;">
+    <ng-container *ngIf="isLoading">
+        <div class="loading-spinner">
+            <i class="bi bi-arrow-repeat spin"></i>
+            Loading posts...
+        </div>
+    </ng-container>
+    <ng-container *ngIf="!isLoading">
+        @if(posts){
+            <ng-container *ngFor="let item of posts;">
+                <div class="post-card">
+                    <!-- Post Header -->
+                    <div class="post-header">
+                        <div class="user-info">
+                            <div class="profile-circle">
+                                <img [src]="item.user.photoUrl || './assets/avatar.png'" [alt]="item.user.knowAs" class="avatar">
+                            </div>
+                            <div class="user-details">
+                                <h5 class="username">{{ item.user.knowAs}}</h5>
+                                <div class="post-metadata">
+                                    <span class="post-time" *ngIf="item.updatedAt === null">
+                                        <ng-container *ngIf="(item.createdAt | timeago) === '1 day ago'; else displayDate">
+                                            {{ item.createdAt | date: 'short' }}
+                                        </ng-container>
+                                        <ng-template #displayDate>
+                                            {{ item.createdAt | timeago }}
+                                        </ng-template>
+                                    </span>
+            
+                                    <span class="post-time" *ngIf="item.updatedAt !== null">
+                                        Edit at {{ item.updatedAt | date: 'short' }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Post Content -->
+                    <div class="post-content">
+                        <p>{{ item.content }}</p>
+                    </div>
+                    <gallery [id]="'gallery-' + item.id" [items]="imagesByPost.get(item.id) || []" thumbPosition="left"></gallery>
+                    <button class="btn btn-sm" (click)="toggleLike(item.id)" style="margin-left: -18px; margin-top: 10px;">
+                        <i *ngIf="isPostLiked(item.id)" style="font-size: 2rem; color: rgb(199, 0, 0);" class="bi bi-heart-fill"></i>
+                        <i *ngIf="!isPostLiked(item.id)" style="font-size: 2rem;" class="bi bi-heart"></i>
+                      </button>   
+                      <a (click)="showListUserLikeModal(item.id)" class="fw-bold"><span style="color: black;">{{ likeCounts.get(item.id) || 0 }} people like this post</span></a>    
+                                   
+                </div>
+            </ng-container>  
+        } @else {
+            <div class="no-posts">
+                <i class="bi bi-journal-x"></i>
+                No posts to display
+            </div>
+        }
+        <!-- Thông báo khi đến cuối danh sách -->
+        <div class="end-of-posts" *ngIf="reachedEnd">
+            <p class="text-center fs-4">You have reached the end of your friend's post, add more friends to see more posts</p>
+            <p class="text-center"><i style="font-size: 2rem;" class="bi bi-clock-history"></i></p>
+        </div>
+    </ng-container>
+</div>

@@ -1,0 +1,36 @@
+
+    <div class="modal-header">
+      <h4 class="modal-title">Verify Your Code</h4>
+      <!-- <button type="button" class="btn-close" aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true"></span>
+      </button> -->
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="verifyForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="code" class="form-label">Enter Verification Code (We have sent the verification code to your email)</label>
+          <input 
+          type="text" 
+          id="code" 
+          formControlName="code" 
+          class="form-control" 
+          placeholder="Enter 6-digit code" 
+          inputmode="numeric" 
+          (keypress)="allowOnlyNumbers($event)"
+            [ngClass]="{'is-invalid': verifyForm.get('code')?.invalid && verifyForm.get('code')?.touched}"
+          >
+          <div *ngIf="verifyForm.get('code')?.invalid && verifyForm.get('code')?.touched" class="text-danger mt-1">
+            <small *ngIf="verifyForm.get('code')?.errors?.['required']">Code is required.</small>
+            <small *ngIf="verifyForm.get('code')?.errors?.['minlength'] || verifyForm.get('code')?.errors?.['maxlength']">Code must be 6 digits.</small>
+            <small *ngIf="verifyForm.get('code')?.errors?.['pattern']">Code must only contain numbers.</small>
+          </div>
+        </div>
+        <button type="submit" class="btn w-100" style="background: linear-gradient(
+            135deg,
+            #6366f1 0%,
+            #8b5cf6 100%); 
+            color:  white;">Verify</button>
+      </form> 
+    </div>
+
+  
